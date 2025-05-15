@@ -18,7 +18,7 @@ async def ask_gpt(
 
     try:
         completion = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": prompt}]
         )
         answer = completion.choices[0].message.content.strip()
